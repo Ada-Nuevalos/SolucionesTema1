@@ -195,6 +195,29 @@ dim(libReturn[[2]])
     d.  Utiliza la función **summary**, sobre **cabbages** y **Chile** y observa como, además de otros estadísticos, también devuelve el número de valores perdidos de cada variable.
 
 ```{r}
+#Las primeras etapas cuando se analiza un nuevo conjunto de datos son:
+# 1)Determinar número de registros
+# 2) Número de variables
+# 3) Tipos de variables
+# 4) Determinar si hay valores perdidos o nulos
+
+#a)
+#Contiene 60 observaciones y 4 variables
+dim(cabbages)
+
+#Tipo de cada variable
+lapply(cabbages, class)
+#Estructura datos
+str(cabbages)
+
+#b) Buscamos los valores perdidos
+sum(is.na(cabbages$Cult))
+sum(is.na(cabbages$Date))
+sum(is.na(cabbages$HeadWt))
+sum(is.na(cabbages$VitC))
+
+#No hay valores perdidos 
+sum(sapply(cabbages,is.na))
 
 
 
@@ -206,17 +229,7 @@ dim(libReturn[[2]])
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
