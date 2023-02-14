@@ -154,7 +154,11 @@ e.  Determina las diferencia entre los animales que no aparecen en ambos conjunt
 
 ```{r}
 
+qqPlot(log(mammals$brain))
+qqPlot(log(Animals2$brain))
 
+#Ambas presentan el mismo comportamiento, es lógico sabiendo que presentan bastantes animales en comun (58)
+#Yo creo que si se podría decir que siguen una distribución Gaussiana
 ```
 
 3.  La función **library** sin argumentos abre una ventana y muestra las librerías que han sido instaladas.
