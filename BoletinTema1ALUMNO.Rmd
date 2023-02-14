@@ -174,7 +174,9 @@ libReturn <- library()
 #b)1eros 5 elementos de la matriz contenida, elemento 2 de la lista
 head(libReturn[[2]],n=5)
 
-
+#c) 
+dim(libReturn[[2]])
+#Contiene 215 registros, es decir tengo 215 librerías instaladas
 
 
 
