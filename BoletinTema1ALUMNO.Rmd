@@ -219,8 +219,16 @@ sum(is.na(cabbages$VitC))
 #No hay valores perdidos 
 sum(sapply(cabbages,is.na))
 
+#c)
+#El conjunto Chile contiene 2700 observaciones y 8 variables
+dim(Chile)
 
+#Tipo y estructura de cada variable
+str(Chile)
+lapply(Chile,class)
 
+#Valores perdidos para cada variable
+colSums(sapply(Chile,is.na))
 
 
 
