@@ -85,29 +85,35 @@ package.check <- lapply(packages, FUN = function(x) {
 
 1.  Considera los conjuntos de datos **mammals** del paquete **MASS** y **Animals2** del paquete **robustbase**.
 
-<!-- -->
-
 a.  Mira la las características de ambos conjuntos usando la ayuda.
 b.  Usa las funciones **dim, head, tail, str** para una primera visión de los conjuntos de datos.
 c.  Muestra los nombres de las filas y las columnas (**rownames**, **colnames**)
 
 ```{r}
+mammals <- MASS::mammals
+Animals2 <- robustbase::Animals2
 
+#Obtenemos una visión del conjunto de datos mammals
+dim(mammals)
+head(mammals)
+tail(mammals)
+str(mammals)
 
+#conjunto de datos Animals2
+dim(Animals2)
+head(Animals2)
+tail(Animals2)
+str(Animals2)
 
+#mammals tiene 62 registros y 2 variables
+#Animals2 tiene 65 filas y 2 variables
 
-
-
-
-
-
-
-
-
-
-
-
-
+#Nombres filas y columnas de mammals
+rownames(mammals)
+colnames(mammals)
+#Nombres filas y columnas de Animals
+rownames(Animals2)
+colnames(Animals2)
 
 ```
 
