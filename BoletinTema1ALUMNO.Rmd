@@ -231,8 +231,9 @@ lapply(Chile,class)
 colSums(sapply(Chile,is.na))
 
 
-
-
+#d)
+summary(cabbages)
+summary(Chile)
 
 
 
