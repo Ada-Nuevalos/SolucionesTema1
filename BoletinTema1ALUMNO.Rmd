@@ -141,7 +141,10 @@ noinmammals
 e.  Determina las diferencia entre los animales que no aparecen en ambos conjuntos.
 
 ```{r}
-
+#En general, los animales que no aparecen en ambos conjuntos son los mismos excepto en el nombre
+#o aparecen con errores por ejemplo "patas monkey" y "potar monkey" o "mole rat" y "mole".
+#Los animales "Artic fox" y "Artic ground squirrel" están en ambos conjuntos solo que por escritura
+#no los detecta como iguales.
 
 
 
