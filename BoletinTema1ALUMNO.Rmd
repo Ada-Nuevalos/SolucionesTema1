@@ -202,6 +202,7 @@ dim(libReturn[[2]])
 # 4) Determinar si hay valores perdidos o nulos
 
 #a)
+cabbages <- MASS::cabbages
 #Contiene 60 observaciones y 4 variables
 dim(cabbages)
 
@@ -253,9 +254,18 @@ qqPlot(cabbages$VitC)
 6.  Una representación habitual, para determinar la distribución de los datos de una variable cuantitativa es el histograma (**hist**). Determina, de forma aproximada, utilizando el histograma, si hay diferencias entre los contenidos de vitamina C (**VitC**), para las diferentes variedades de calabaza (variable **Cult**), en el conjunto de datos **cabbages**.
 
 ```{r}
+levels(cabbages$Cult)
+#Las calabazas presentan dos variedades diferentes "c39" y "c52"
+#Creo dataframe con las calabazas cuya variedad es c39 y otro con c52
+cabbages_c39 <- cabbages[cabbages$Cult=="c39",]
+cabbages_c52 <- cabbages[cabbages$Cult=="c52",]
 
+hist(cabbages_c39$VitC,xlab = "Vitamina C", main = "Calabazas `c39`",col="green")
+hist(cabbages_c52$VitC,xlab = "Vitamina C", main = "Calabazas `c52`", col = "brown  ")
 
-
+#Si hay diferencia en el contenido de vitamica C entre las diferentes variedades 
+#La variedad "c52" presenta más nivel de vitamina C en comparación con la otra 
+#variedad
 ```
 
 7.  Un modelo sencillo para relacionar variables es la *predicción lineal*. En el siguiente ejemplo se utiliza el conjunto de datos **whiteside**, de la librería **MASS**. Esta aproximación propone un modelo que predice una variable a partir de otra. Una primera etapa para plantear esta aproximación sería representar ambas variables mediante un diagrama de dispersión (Gráfico XY) y determinar si la relación entre variables "parece" lineal. Si es así, podemos plantear un modelo lineal (en este caso según un factor), donde se aprecia claramente que existe una relación lineal entre las dos variables consideradas. Observa y ejecuta el siguiente código.
